@@ -69,8 +69,8 @@ afterEvaluate{
         create("release", MavenPublication::class.java) {
             groupId = "co.jp.empolio"
             artifactId = "sample2_library"
-            version = "0.1.1"
-//            artifact("$buildDir/outputs/aar/Mathlibrary-release.aar")
+            version = "0.1.3"
+            artifact("$buildDir/outputs/aar/Mathlibrary-release.aar")
         }
     }
     }
