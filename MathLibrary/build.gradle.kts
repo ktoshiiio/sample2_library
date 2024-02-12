@@ -69,10 +69,14 @@ afterEvaluate{
         create("release", MavenPublication::class.java) {
             groupId = "co.jp.empolio"
             artifactId = "sample2_library"
-            version = "0.1.9"
+            version = "0.2.0"
             artifact("$buildDir/outputs/aar/MathLibrary-release.aar")
         }
     }
+    }
+    // タスク間の依存関係を明示
+    tasks.named("publishReleasePublicationToMavenLocal").configure {
+        dependsOn("bundleReleaseAar")
     }
 }
 
