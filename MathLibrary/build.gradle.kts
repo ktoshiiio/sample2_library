@@ -69,7 +69,7 @@ afterEvaluate{
         create("release", MavenPublication::class.java) {
             groupId = "co.jp.empolio"
             artifactId = "sample2_library"
-            version = "0.1.6"
+            version = "0.1.7"
             artifact("$buildDir/outputs/aar/Mathlibrary-release.aar")
         }
     }
@@ -80,7 +80,7 @@ afterEvaluate{
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
-    implementation("com.github.ktoshiiio:sample2_library:0.1.6")
+//    implementation("com.github.ktoshiiio:sample2_library:0.1.7")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     testImplementation("junit:junit:4.13.2")
